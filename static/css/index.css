@@ -1,0 +1,337 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dnerf {
+    font-variant: small-caps;
+}
+
+
+.teaser .hero-body {
+    padding-top: 0;
+    padding-bottom: 3rem;
+}
+
+.teaser {
+    font-family: 'Google Sans', sans-serif;
+}
+
+
+.publication-title {
+}
+
+.publication-banner {
+    max-height: parent;
+
+}
+
+.publication-banner video {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    object-fit: fit;
+}
+
+.publication-header .hero-body {
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+    color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+    display: inline-block;
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+    /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+    overflow: hidden;
+}
+
+.results-carousel .item {
+    margin: 50px;
+    overflow: hidden;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    padding: 0;
+    font-size: 0;
+}
+
+.results-carousel video {
+    margin: 0;
+}
+
+
+.interpolation-panel {
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+
+.interpolation-panel .interpolation-image {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.interpolation-video-column {
+}
+
+.interpolation-panel .slider {
+    margin: 0 !important;
+}
+
+.interpolation-panel .slider {
+    margin: 0 !important;
+}
+
+#interpolation-image-wrapper {
+    width: 100%;
+}
+
+#interpolation-image-wrapper img {
+    border-radius: 5px;
+}
+
+.item img {
+    width: 100%;
+}
+
+edit-section-images > div {
+    width: 33%
+}
+
+edit-section p {
+    text-align: center;
+    font-size: xx-large;
+}
+
+edit-section-images {
+    display: flex;
+}
+
+
+edit-section-images div:not(:last-child) {
+    margin-right: 40px;
+}
+edit-section-images div:not(:first-child):not(:last-child) {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.img-str-fan
+{
+    width: 24%;
+}
+.img-str-fan.shivta
+{
+    height:18%;
+}
+.img-str-fan.chinese-house{
+    height: 16%;
+}
+.monks-comparison-container
+{
+    width: 24%;
+    text-align: center;
+    font-weight: bold;
+}
+.monks-comparison-container:not(:last-child)
+{
+    margin-right: 0.75%
+}
+.monks-comparison-container:not(:first-child):not(:last-child)
+{
+    margin-right: 0.75%;
+    margin-left: 0.75%
+}
+.monks-comparison-container:last-child
+{
+    margin-left:0.75%
+}
+.top-pad{
+    margin-top:5%
+}
+.label.monks.comparison,.label.peacock.comparison,.label.cameile.comparison,.label.dark.comparison,.label.other-models.comparison{
+    margin-bottom: 0px;
+}
+.label.comparison{
+    text-align: center;
+    font-weight: bold;
+}
+.has-frame
+{
+border: 1px solid black;
+}
+.label.model-name{
+    text-align: center;
+    font-weight: normal;
+}
+edit-section-images div:first-child.other-models
+{
+    margin-right: 0.75%
+}
+edit-section-images div:not(:first-child):not(:last-child).other-models
+{
+    margin-right: 0.75%;
+    margin-left: 0.75%
+}
+edit-section-images div:last-child.other-models
+{
+    margin-left:0.75%
+}
+.large-top-pad{
+    margin-top:10%
+}
+
+edit-section-images div:first-child.continuous
+{
+    margin-right: 0.75%
+}
+edit-section-images div:not(:first-child):not(:last-child).continuous
+{
+    margin-right: 0.75%;
+    margin-left: 0.75%
+}
+edit-section-images div:last-child.continuous
+{
+    margin-left:0.75%
+}
+.zoomable {
+    cursor: zoom-in;
+}
+edit-section p.small-tag
+{
+font-size:x-large;
+}
+.continuous .small-tag.label, #line-of-tag-discrete>p
+{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+.half-size>div{
+    width: 32%;
+}
+.horizontal{
+    display: flex;
+
+}
+
+
+edit-section-images div:first-child
+{
+    margin-right: 0.75%
+}
+edit-section-images div:not(:first-child):not(:last-child).cameile-comparison-container
+{
+    margin-right: 0.75%;
+    margin-left: 0.75%
+}
+edit-section-images div:last-child.cameile-comparison-container
+{
+    margin-left:0.75%
+}
+
+
+edit-section-images div:first-child.peacock-comparison-container
+{
+    margin-right: 0.75%
+}
+edit-section-images div:not(:first-child):not(:last-child).peacock-comparison-container
+{
+    margin-right: 0.75%;
+    margin-left: 0.75%
+}
+edit-section-images div:last-child.peacock-comparison-container
+{
+    margin-left:0.75%
+}
+.horizontal >edit-section-images
+{
+    justify-content: space-evenly;
+}
+subtle-space
+{
+    width: 10%;
+}
+.prompt{
+    text-align: center;
+    font-size: x-large;
+}
+#discrete-edit-original
+{
+    width: 33%;
+}
+#dog-video
+{
+    width: 66%;
+}
+#line-of-tag-discrete{
+    justify-content: space-around;
+    font-size: x-large;
+}
