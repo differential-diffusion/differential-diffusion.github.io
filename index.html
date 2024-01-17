@@ -82,20 +82,6 @@
                   <span>arXiv</span>
                 </a>
               </span>
-                            <!--
-                            <\\!-- Video Link.
-                            <span class="link-block">
-                              <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                                 class="external-link button is-normal is-rounded is-dark">
-                                <span class="icon">
-                                    <i class="fab fa-youtube"></i>
-                                </span>
-                                <span>Video</span>
-                              </a>
-                            </span>
-                            --\\>
-                            -->
-
                             <!-- Code Link. -->
                             <span class="link-block">
                 <a href="https://github.com/exx8/differential-diffusion"
@@ -108,7 +94,7 @@
               </span>
                             <span class="link-block">
                 <a href="https://github.com/exx8/differential-diffusion"
-                   class="external-link button is-normal is-rounded is-dark">
+                   class="external-link button is-normal is-rounded is-dark" disabled>
                   <span class="icon">
                       <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Google Colab</title><path
                               fill="white"
@@ -127,30 +113,61 @@
 </section>
 
 
-
-
 <section class="hero is-light is-small">
     <div class="hero-body">
         <h2 class="subtitle has-text-centered">
-            Differential diffusion allows you to edit each region of the picture with a different amount of change (strength).
+            <span class="dnerf">Differential Diffusion</span> modifies an image according to a text prompt, and according to a map that specifies <i>the amount of change</i> in each region.
+
         </h2>
-        <div class="container">
+        <div class="container low-res-only">
+            <edit-section class="item">
+                <edit-section-images>
+
+                    <div id="container-input-placeholder0">
+                        <p>Input</p>
+
+                        <img class="has-frame zoomable"
+                             src="static/images/gallery/J/pexels-sebastian-palomino-1955134.jpg"/>
+
+                    </div>
+                    <div id="container-input-placeholder1">
+                        <p>Map</p>
+
+                        <img class="has-frame zoomable"
+                             src="static/images/gallery/J/mask_pexels-sebastian-palomino-1955134.jpg"/>
+
+                    </div>
+                    <div id="container-input-placeholder2">
+                        <p>Output</p>
+
+                        <img class="has-frame zoomable" src="static/images/gallery/J/00048.webp"/>
+
+                    </div>
+                </edit-section-images>
+                <p>
+                    “whimsical illustration of a rainbow...”
+                </p>
+            </edit-section>
+
+        </div>
+        <div class="container hi-res-only">
             <div id="results-carousel" class="carousel results-carousel">
 
                 <edit-section class="item">
                     <edit-section-images>
                         <div>
                             <p>Input</p>
-                            <img class ="has-frame zoomable" src="static/images/gallery/A2/pexels-pixabay-257499.jpg"/>
+                            <img class="has-frame zoomable" src="static/images/gallery/A2/pexels-pixabay-257499.jpg"/>
 
                         </div>
                         <div>
                             <p>Map</p>
-                            <img class ="has-frame zoomable zoomable" src="static/images/gallery/A2/mask_pexels-pixabay-257499.jpg"/>
+                            <img class="has-frame zoomable zoomable"
+                                 src="static/images/gallery/A2/mask_pexels-pixabay-257499.jpg"/>
                         </div>
                         <div>
                             <p>Output</p>
-                            <img class ="has-frame zoomable zoomable" src="static/images/gallery/A2/00039.webp"/>
+                            <img class="has-frame zoomable zoomable" src="static/images/gallery/A2/00039.webp"/>
 
                         </div>
                     </edit-section-images>
@@ -164,17 +181,19 @@
 
                         <div>
                             <p>Input</p>
-                            <img class ="has-frame zoomable" src="static/images/gallery/C/pexels-roberto-vivancos-2190283.jpg"/>
+                            <img class="has-frame zoomable"
+                                 src="static/images/gallery/C/pexels-roberto-vivancos-2190283.jpg"/>
 
 
                         </div>
                         <div>
                             <p>Map</p>
-                            <img class ="has-frame zoomable" src="static/images/gallery/C/mask_pexels-roberto-vivancos-2190283.jpg"/>
+                            <img class="has-frame zoomable"
+                                 src="static/images/gallery/C/mask_pexels-roberto-vivancos-2190283.jpg"/>
                         </div>
                         <div>
                             <p>Output</p>
-                            <img class ="has-frame zoomable" src="static/images/gallery/C/00040.webp"/>
+                            <img class="has-frame zoomable" src="static/images/gallery/C/00040.webp"/>
                         </div>
                     </edit-section-images>
                     <p>
@@ -186,18 +205,20 @@
                     <edit-section-images>
                         <div>
                             <p>Input</p>
-                            <img class ="has-frame zoomable" src="static/images/gallery/D/pexels-oziel-gómez-7529416.png"/>
+                            <img class="has-frame zoomable"
+                                 src="static/images/gallery/D/pexels-oziel-gómez-7529416.png"/>
 
                         </div>
                         <div>
                             <p>Map</p>
 
-                            <img class ="has-frame zoomable" src="static/images/gallery/D/mask_pexels-oziel-gómez-7529416.png"/>
+                            <img class="has-frame zoomable"
+                                 src="static/images/gallery/D/mask_pexels-oziel-gómez-7529416.png"/>
                         </div>
                         <div>
                             <p>Output</p>
 
-                            <img class ="has-frame zoomable" src="static/images/gallery/D/00055.webp"/>
+                            <img class="has-frame zoomable" src="static/images/gallery/D/00055.webp"/>
 
                         </div>
                     </edit-section-images>
@@ -212,18 +233,19 @@
                         <div>
                             <p>Input</p>
 
-                            <img class ="has-frame zoomable" src="static/images/gallery/I/pexels-nic-law-792832.jpg"/>
+                            <img class="has-frame zoomable" src="static/images/gallery/I/pexels-nic-law-792832.jpg"/>
                         </div>
                         <div>
                             <p>Map</p>
 
-                            <img class ="has-frame zoomable" src="static/images/gallery/I/mask_pexels-nic-law-792832.jpg"/>
+                            <img class="has-frame zoomable"
+                                 src="static/images/gallery/I/mask_pexels-nic-law-792832.jpg"/>
 
                         </div>
                         <div>
                             <p>Output</p>
 
-                            <img class ="has-frame zoomable" src="static/images/gallery/I/00045.webp"/>
+                            <img class="has-frame zoomable" src="static/images/gallery/I/00045.webp"/>
 
                         </div>
                     </edit-section-images>
@@ -238,19 +260,21 @@
                         <div>
                             <p>Input</p>
 
-                            <img class ="has-frame zoomable" src="static/images/gallery/J/pexels-sebastian-palomino-1955134.jpg"/>
+                            <img class="has-frame zoomable"
+                                 src="static/images/gallery/J/pexels-sebastian-palomino-1955134.jpg"/>
 
                         </div>
                         <div>
                             <p>Map</p>
 
-                            <img class ="has-frame zoomable" src="static/images/gallery/J/mask_pexels-sebastian-palomino-1955134.jpg"/>
+                            <img class="has-frame zoomable"
+                                 src="static/images/gallery/J/mask_pexels-sebastian-palomino-1955134.jpg"/>
 
                         </div>
                         <div>
                             <p>Output</p>
 
-                            <img class ="has-frame zoomable" src="static/images/gallery/J/00048.webp"/>
+                            <img class="has-frame zoomable" src="static/images/gallery/J/00048.webp"/>
 
                         </div>
                     </edit-section-images>
@@ -286,7 +310,7 @@
                         Such granular control on the quantity of change opens up a diverse array of new editing
                         capabilities, such as control of the extent to which individual objects are modified, or
                         the ability to introduce gradual spatial changes.
-                        Furthermore, we showcase the framework's effectiveness in soft-inpainting---the completion of
+                        Furthermore, we showcase the framework's effectiveness in soft-inpainting—the completion of
                         portions of an image while subtly adjusting the surrounding areas to ensure seamless
                         integration.
                         Additionally, we introduce a new tool for exploring the effects of different change quantities.
@@ -301,8 +325,127 @@
 
     </div>
 </section>
+<!--low res-->
+<section class="section low-res-only no-floating-tags">
+    <div class="container is-max-desktop">
+
+        <div class="columns is-centered">
+
+            <!-- Visual Effects. -->
+            <div class="column">
+                <div class="content">
 
 
+                    <edit-section class="item">
+                        <edit-section-images>
+                            <div>
+                                <p>Input</p>
+                                <img class="has-frame zoomable" src="static/images/gallery/A2/pexels-pixabay-257499.jpg"/>
+
+                            </div>
+                            <div>
+                                <p>Map</p>
+                                <img class="has-frame zoomable zoomable"
+                                     src="static/images/gallery/A2/mask_pexels-pixabay-257499.jpg"/>
+                            </div>
+                            <div>
+                                <p>Output</p>
+                                <img class="has-frame zoomable zoomable" src="static/images/gallery/A2/00039.webp"/>
+
+                            </div>
+                        </edit-section-images>
+                        <p>
+                            “tree of life under the sea...”
+                        </p>
+                    </edit-section>
+
+                    <edit-section class="item">
+                        <edit-section-images>
+
+                            <div>
+                                <p>Input</p>
+                                <img class="has-frame zoomable"
+                                     src="static/images/gallery/C/pexels-roberto-vivancos-2190283.jpg"/>
+
+
+                            </div>
+                            <div>
+                                <p>Map</p>
+                                <img class="has-frame zoomable"
+                                     src="static/images/gallery/C/mask_pexels-roberto-vivancos-2190283.jpg"/>
+                            </div>
+                            <div>
+                                <p>Output</p>
+                                <img class="has-frame zoomable" src="static/images/gallery/C/00040.webp"/>
+                            </div>
+                        </edit-section-images>
+                        <p>
+                            “palace above the clouds...”
+                        </p>
+                    </edit-section>
+
+                    <edit-section class="item">
+                        <edit-section-images>
+                            <div>
+                                <p>Input</p>
+                                <img class="has-frame zoomable"
+                                     src="static/images/gallery/D/pexels-oziel-gómez-7529416.png"/>
+
+                            </div>
+                            <div>
+                                <p>Map</p>
+
+                                <img class="has-frame zoomable"
+                                     src="static/images/gallery/D/mask_pexels-oziel-gómez-7529416.png"/>
+                            </div>
+                            <div>
+                                <p>Output</p>
+
+                                <img class="has-frame zoomable" src="static/images/gallery/D/00055.webp"/>
+
+                            </div>
+                        </edit-section-images>
+                        <p>
+                            “3d depth outer space nebulae background...”
+                        </p>
+                    </edit-section>
+
+                    <edit-section class="item">
+                        <edit-section-images>
+
+                            <div>
+                                <p>Input</p>
+
+                                <img class="has-frame zoomable" src="static/images/gallery/I/pexels-nic-law-792832.jpg"/>
+                            </div>
+                            <div>
+                                <p>Map</p>
+
+                                <img class="has-frame zoomable"
+                                     src="static/images/gallery/I/mask_pexels-nic-law-792832.jpg"/>
+
+                            </div>
+                            <div>
+                                <p>Output</p>
+
+                                <img class="has-frame zoomable" src="static/images/gallery/I/00045.webp"/>
+
+                            </div>
+                        </edit-section-images>
+                        <p>
+                            “fantasy art...”
+                        </p>
+                    </edit-section>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/low-res-->
 <section class="section">
     <div class="container is-max-desktop">
 
@@ -312,16 +455,18 @@
             <div class="column">
                 <div class="content">
                     <h2 class="title is-3">Discrete Editing</h2>
-                    <p>Use Differential-Diffusion to edit a picture with different amount of change for each region.
+                    <p>Use <span class="dnerf">Differential Diffusion</span> to edit a picture with different amount of change for each region.
                     </p>
-                    <div class="is-flex" id="line-of-tag-discrete"><p>Input</p><p>Map</p><p>Output</p></div>
-                    <div  class="is-flex">
-                    <img src="static/images/edit/discrete/dog.jpg" class="has-frame" id="discrete-edit-original" />
+                    <div class="is-flex" id="line-of-tag-discrete"><p>Input</p>
+                        <p>Map</p>
+                        <p>Output</p></div>
+                    <div class="is-flex">
+                        <img src="static/images/edit/discrete/dog.jpg" class="has-frame" id="discrete-edit-original"/>
 
-                    <video  class="has-frame" autoplay controls muted loop playsinline id="dog-video">
-                        <source src="./static/videos/N/dog/output_stacked.mp4"
-                                type="video/mp4">
-                    </video>
+                        <video class="has-frame" autoplay controls muted loop playsinline id="dog-video">
+                            <source src="./static/videos/N/dog/output_stacked.mp4"
+                                    type="video/mp4">
+                        </video>
                     </div>
                     <p class="prompt">
                         “race car video game”
@@ -336,7 +481,7 @@
                 <div class="columns is-centered">
                     <div class="column content">
                         <p>
-                            Apply Differential-Diffusion to edit a picture with a continuous range of change amounts.
+                            Apply <span class="dnerf">Differential Diffusion</span> to edit a picture with a continuous range of change amounts.
                         </p>
                         <edit-section class="item">
                             <edit-section-images>
@@ -344,26 +489,29 @@
                                 <div class="continuous">
                                     <p class="small-tag label">Input</p>
 
-                                    <img class ="has-frame zoomable" src="static/images/edit/pexels-trev-adams-12504957.jpg"/>
+                                    <img class="has-frame zoomable"
+                                         src="static/images/edit/pexels-trev-adams-12504957.jpg"/>
 
                                 </div>
                                 <div class="continuous">
                                     <p class="small-tag label">Map</p>
 
-                                    <img class ="has-frame zoomable" src="static/images/edit/mask_pexels-trev-adams-12504957.jpg"/>
+                                    <img class="has-frame zoomable"
+                                         src="static/images/edit/mask_pexels-trev-adams-12504957.jpg"/>
 
                                 </div>
                                 <div class="continuous">
                                     <p class="small-tag label">Output</p>
 
-                                    <img class ="has-frame zoomable" src="static/images/edit/00075.webp"/>
+                                    <img class="has-frame zoomable" src="static/images/edit/00075.webp"/>
 
                                 </div>
                             </edit-section-images>
                             <p class="prompt">
                                 “painting of dream worlds...”
                             </p>
-                        </edit-section>                    </div>
+                        </edit-section>
+                    </div>
 
                 </div>
             </div>
@@ -375,19 +523,21 @@
             <div class="column is-full-width">
 
 
-                <h2 class="title ">Other Diffusion models</h2>
-                Our framework can be ported to other diffusion models as seen in the paper.
+                <h2 class="title ">Other Diffusion Models</h2>
+                Our framework can be ported to other diffusion models.
 
                 <div class="has-text-justified top-pad">
                     <edit-section-images>
                         <div class="other-models">
                             <p class="label other-models comparison">Input</p>
-                            <img class="has-frame zoomable" src="static/images/models_gallery/AdobeStock_206096525_L.webp"/>
+                            <img class="has-frame zoomable"
+                                 src="static/images/models_gallery/AdobeStock_206096525_L.webp"/>
 
                         </div>
                         <div class="other-models">
                             <p class="label other-models comparison">Map</p>
-                            <img class="has-frame zoomable" src="static/images/models_gallery/mask_AdobeStock_206096525_L.jpeg"/>
+                            <img class="has-frame zoomable"
+                                 src="static/images/models_gallery/mask_AdobeStock_206096525_L.jpeg"/>
 
                         </div>
                         <div class="other-models">
@@ -401,7 +551,8 @@
                     <edit-section-images>
                         <div class="other-models">
                             <p class="label other-models comparison">Input</p>
-                            <img class="has-frame zoomable" src="static/images/models_gallery/pexels-brett-sayles-4602350.jpg"/>
+                            <img class="has-frame zoomable"
+                                 src="static/images/models_gallery/pexels-brett-sayles-4602350.jpg"/>
 
                         </div>
                         <div class="other-models">
@@ -411,7 +562,8 @@
                         </div>
                         <div class="other-models">
                             <p class="label other-models comparison">Output</p>
-                            <img class="has-frame zoomable" src="static/images/models_gallery/if_stage_III_47_adapted.png"/>
+                            <img class="has-frame zoomable"
+                                 src="static/images/models_gallery/if_stage_III_47_adapted.png"/>
 
                         </div>
                     </edit-section-images>
@@ -444,12 +596,14 @@
                     <edit-section-images class="top-pad">
                         <div class="other-models">
                             <p class="label other-models comparison">Input</p>
-                            <img class="has-frame zoomable" src="static/images/models_gallery/wave/pexels-boris-ulzibat-1731660.jpg"/>
+                            <img class="has-frame zoomable"
+                                 src="static/images/models_gallery/wave/pexels-boris-ulzibat-1731660.jpg"/>
 
                         </div>
                         <div class="other-models">
                             <p class="label other-models comparison">Map</p>
-                            <img class="has-frame zoomable" src="static/images/models_gallery/wave/mask_pexels-boris-ulzibat-1731660.jpg"/>
+                            <img class="has-frame zoomable"
+                                 src="static/images/models_gallery/wave/mask_pexels-boris-ulzibat-1731660.jpg"/>
 
                         </div>
                         <div class="other-models">
@@ -458,17 +612,20 @@
 
                         </div>
                     </edit-section-images>
-                    <p class="has-text-centered">The prompt is: “very beautiful insanely detailed image of tsunami in golden spring...”</p>
+                    <p class="has-text-centered">The prompt is: “very beautiful insanely detailed image of tsunami in
+                        golden spring...”. Edited with Stable Diffusion XL.</p>
 
                     <edit-section-images class="top-pad">
                         <div class="other-models">
                             <p class="label other-models comparison">Input</p>
-                            <img class="has-frame zoomable" src="static/images/models_gallery/forest/pexels-kaique-rocha-775201.jpg"/>
+                            <img class="has-frame zoomable"
+                                 src="static/images/models_gallery/forest/pexels-kaique-rocha-775201.jpg"/>
 
                         </div>
                         <div class="other-models">
                             <p class="label other-models comparison">Map</p>
-                            <img class="has-frame zoomable" src="static/images/models_gallery/forest/mask_pexels-kaique-rocha-775201.jpg"/>
+                            <img class="has-frame zoomable"
+                                 src="static/images/models_gallery/forest/mask_pexels-kaique-rocha-775201.jpg"/>
 
                         </div>
                         <div class="other-models">
@@ -477,130 +634,151 @@
 
                         </div>
                     </edit-section-images>
-                    <p class="has-text-centered">The prompt is: “autumn best quality, ink painting, acrylic...”</p>
+                    <p class="has-text-centered">The prompt is: “autumn best quality, ink painting, acrylic...”. Edited
+                        with Stable Diffusion XL.</p>
                 </div>
                 <div>
-                <h2 class="title large-top-pad">Soft Inpaint</h2>
-                Our framework can be used to implement soft inpainting — the completion of portions of an image while subtly adjusting
-                the surrounding areas to ensure seamless integration. Mind the regions that adjacent to the border.
+                    <h2 class="title large-top-pad">Soft Inpaint</h2>
+                    Our framework can be used to implement soft inpainting — the completion of portions of an image
+                    while subtly adjusting
+                    the surrounding areas to ensure seamless integration. Mind the regions that are adjacent to the
+                    border.
 
-                <div class="has-text-justified top-pad">
-                    <edit-section-images>
-                        <div class="dark-comparison-container">
-                            <p class="label dark comparison">Input</p>
-                            <img class="has-frame zoomable soft-inpaint" src="static/images/soft_inpaint/dark/pexels-frank-cone-3573555.jpg"/>
-
-                        </div>
-                        <div class="dark-comparison-container">
-                            <p class="label dark comparison">Inpaint Mask</p>
-                            <img class="has-frame zoomable soft-inpaint" src="static/images/soft_inpaint/dark/mask3.jpg"/>
-
-                        </div>
-                        <div class="dark-comparison-container">
-                            <p class="label dark comparison">Output</p>
-                            <img class="has-frame zoomable soft-inpaint" src="static/images/soft_inpaint/dark/augmented_10_of_pexels-frank-cone-3573555.jpg"/>
-
-                        </div>
-                    </edit-section-images>
-                    <div class="horizontal">
-                    <edit-section-images class="half-size">
-                        <div class="peacock-comparison-container">
-                            <p class="label peacock comparison">Input</p>
-                            <img class="has-frame zoomable soft-inpaint" src="static/images/soft_inpaint/peacock/pexels-steve-johnson-1266808.jpg"/>
-
-                        </div>
-                        <div class="peacock-comparison-container">
-                            <p class="label peacock comparison">Inpaint Mask</p>
-                            <img class="has-frame zoomable soft-inpaint" src="static/images/soft_inpaint/peacock/elipse.jpg"/>
-
-                        </div>
-                        <div class="peacock-comparison-container">
-                            <p class="label peacock comparison">Output</p>
-                            <img class="has-frame zoomable soft-inpaint" src="static/images/soft_inpaint/peacock/augmented_15_of_pexels-steve-johnson-1266808.jpg"/>
-
-                        </div>
-                    </edit-section-images>
-                        <subtle-space></subtle-space>
-
-                        <edit-section-images class="half-size">
-                            <div class="cameile-comparison-container">
-                                <p class="label cameile comparison">Input</p>
-                                <img class="has-frame zoomable soft-inpaint" src="static/images/soft_inpaint/cameile/27273215140_1d79024fe8_o.jpg"/>
+                    <div class="has-text-justified top-pad">
+                        <edit-section-images>
+                            <div class="dark-comparison-container">
+                                <p class="label dark comparison">Input</p>
+                                <img class="has-frame zoomable soft-inpaint"
+                                     src="static/images/soft_inpaint/dark/pexels-frank-cone-3573555.jpg"/>
 
                             </div>
-                            <div class="cameile-comparison-container">
-                                <p class="label cameile comparison">Inpaint Mask</p>
-                                <img class="has-frame zoomable soft-inpaint" src="static/images/soft_inpaint/cameile/inpaint_mask.jpg"/>
+                            <div class="dark-comparison-container">
+                                <p class="label dark comparison inpaint-mask-label">Inpaint Mask</p>
+                                <img class="has-frame zoomable soft-inpaint"
+                                     src="static/images/soft_inpaint/dark/mask3.jpg"/>
 
                             </div>
-                            <div class="cameile-comparison-container">
-                                <p class="label cameile comparison">Output</p>
-                                <img class="has-frame zoomable soft-inpaint" src="static/images/soft_inpaint/cameile/augmented_15_of_27273215140_1d79024fe8_o.jpg"/>
+                            <div class="dark-comparison-container">
+                                <p class="label dark comparison">Output</p>
+                                <img class="has-frame zoomable soft-inpaint"
+                                     src="static/images/soft_inpaint/dark/augmented_10_of_pexels-frank-cone-3573555.jpg"/>
 
                             </div>
                         </edit-section-images>
+                        <div class="horizontal">
+                            <edit-section-images class="half-size">
+                                <div class="peacock-comparison-container">
+                                    <p class="label peacock comparison">Input</p>
+                                    <img class="has-frame zoomable soft-inpaint"
+                                         src="static/images/soft_inpaint/peacock/pexels-steve-johnson-1266808.jpg"/>
+
+                                </div>
+                                <div class="peacock-comparison-container">
+                                    <p class="label peacock comparison inpaint-mask-label">Inpaint Mask</p>
+                                    <img class="has-frame zoomable soft-inpaint"
+                                         src="static/images/soft_inpaint/peacock/elipse.jpg"/>
+
+                                </div>
+                                <div class="peacock-comparison-container">
+                                    <p class="label peacock comparison">Output</p>
+                                    <img class="has-frame zoomable soft-inpaint"
+                                         src="static/images/soft_inpaint/peacock/augmented_15_of_pexels-steve-johnson-1266808.jpg"/>
+
+                                </div>
+                            </edit-section-images>
+                            <subtle-space></subtle-space>
+
+                            <edit-section-images class="half-size">
+                                <div class="cameile-comparison-container">
+                                    <p class="label cameile comparison">Input</p>
+                                    <img class="has-frame zoomable soft-inpaint"
+                                         src="static/images/soft_inpaint/cameile/27273215140_1d79024fe8_o.jpg"/>
+
+                                </div>
+                                <div class="cameile-comparison-container">
+                                    <p class="label cameile comparison inpaint-mask-label">Inpaint Mask</p>
+                                    <img class="has-frame zoomable soft-inpaint"
+                                         src="static/images/soft_inpaint/cameile/inpaint_mask.jpg"/>
+
+                                </div>
+                                <div class="cameile-comparison-container">
+                                    <p class="label cameile comparison">Output</p>
+                                    <img class="has-frame zoomable soft-inpaint"
+                                         src="static/images/soft_inpaint/cameile/augmented_15_of_27273215140_1d79024fe8_o.jpg"/>
+
+                                </div>
+                            </edit-section-images>
+                        </div>
+                        <p class="has-text-centered">The prompts are
+                            “peacock, realism”, “Gustave Courbet”, “Camille Monet”, the softening radius is: 64px</p>
+                        <h2 class="title is-5 large-top-pad">Comparison</h2>
+
+
+                        <edit-section-images>
+                            <div class="monks-comparison-container">
+                                <p class="label monks comparison">Input</p>
+                                <img class="has-frame zoomable soft-inpaint"
+                                     src="static/images/soft_inpaint/monks/original_image.jpg"/>
+
+                            </div>
+                            <div class="monks-comparison-container">
+                                <p class="label monks comparison inpaint-mask-label">Inpaint Mask</p>
+                                <img class="has-frame zoomable soft-inpaint"
+                                     src="static/images/soft_inpaint/monks/mask_monks_original.png"/>
+
+                            </div>
+                            <div class="monks-comparison-container">
+                                <p id="no-soft" class="label monks comparison">No Softening</p>
+                                <img class="has-frame zoomable soft-inpaint"
+                                     src="static/images/soft_inpaint/monks/sharp_mask.png"/>
+
+                            </div>
+                            <div class="monks-comparison-container">
+                                <p class="label monks comparison" id="alpha-compose">α-compose</p>
+                                <img class="has-frame zoomable soft-inpaint"
+                                     src="static/images/soft_inpaint/monks/monk_alpha_blend.png"/>
+
+                            </div>
+
+                        </edit-section-images>
+                        <edit-section-images>
+
+                            <div class="monks-comparison-container">
+                                <p class="label monks comparison">Poisson</p>
+                                <img class="has-frame zoomable soft-inpaint"
+                                     src="static/images/soft_inpaint/monks/poission.png"/>
+
+                            </div>
+                            <div class="monks-comparison-container">
+                                <p class="label monks comparison">Laplace</p>
+                                <img class="has-frame zoomable soft-inpaint"
+                                     src="static/images/soft_inpaint/monks/monk_laplace.png"/>
+
+                            </div>
+                            <div class="monks-comparison-container">
+                                <p id="standard-soft" class="label monks comparison">Standard Softening</p>
+                                <img class="has-frame zoomable soft-inpaint"
+                                     src="static/images/soft_inpaint/monks/blured_mask.png"/>
+
+                            </div>
+                            <div class="monks-comparison-container">
+                                <p class="label monks comparison">Ours</p>
+                                <img class="has-frame zoomable soft-inpaint"
+                                     src="static/images/soft_inpaint/monks/augmented_39_of_monks_blur.jpg"/>
+
+                            </div>
+
+                        </edit-section-images>
+                        <p class="has-text-centered">The prompts are
+                            “Gustave Courbet”, “peacock, realism”, “Camille Monet”, the softening radius is: 64px</p>
+
                     </div>
-                    <p class="has-text-centered">The prompts are
-                        “peacock, realism”,“Gustave Courbet”, “Camille Monet”, the softening radius is: 64px</p>
-                    <h2 class="title is-5 large-top-pad">Comparison</h2>
-
-
-                    <edit-section-images>
-                        <div class="monks-comparison-container">
-                            <p class="label monks comparison">Input</p>
-                            <img class="has-frame zoomable soft-inpaint" src="static/images/soft_inpaint/monks/original_image.jpg"/>
-
-                        </div>
-                        <div class="monks-comparison-container">
-                            <p class="label monks comparison">Inpaint Mask</p>
-                            <img class="has-frame zoomable soft-inpaint" src="static/images/soft_inpaint/monks/mask_monks_original.png"/>
-
-                        </div>
-                        <div class="monks-comparison-container">
-                            <p class="label monks comparison">No Softening</p>
-                            <img class="has-frame zoomable soft-inpaint" src="static/images/soft_inpaint/monks/sharp_mask.png"/>
-
-                        </div>
-                        <div class="monks-comparison-container">
-                            <p class="label monks comparison">α-compose</p>
-                            <img class="has-frame zoomable soft-inpaint" src="static/images/soft_inpaint/monks/monk_alpha_blend.png"/>
-
-                        </div>
-
-                    </edit-section-images>
-                    <edit-section-images>
-
-                        <div class="monks-comparison-container">
-                            <p class="label monks comparison">Poisson</p>
-                            <img class="has-frame zoomable soft-inpaint" src="static/images/soft_inpaint/monks/poission.png"/>
-
-                        </div>
-                        <div class="monks-comparison-container">
-                            <p class="label monks comparison">Laplace</p>
-                            <img class="has-frame zoomable soft-inpaint" src="static/images/soft_inpaint/monks/monk_laplace.png"/>
-
-                        </div>
-                        <div class="monks-comparison-container">
-                            <p class="label monks comparison">Standard Soft</p>
-                            <img class="has-frame zoomable soft-inpaint" src="static/images/soft_inpaint/monks/blured_mask.png"/>
-
-                        </div>
-                        <div class="monks-comparison-container">
-                            <p class="label monks comparison">Ours</p>
-                            <img class="has-frame zoomable soft-inpaint" src="static/images/soft_inpaint/monks/augmented_39_of_monks_blur.jpg"/>
-
-                        </div>
-
-                    </edit-section-images>
-                    <p class="has-text-centered">The prompts are
-                        “Gustave Courbet”, “peacock, realism”, “Camille Monet”, the softening radius is: 64px</p>
-
                 </div>
-                    </div>
                 <h2 class="title large-top-pad">Strength Fans</h2>
                 <div class="content has-text-justified">
                     <p>
-                        Use Differential-Diffusion to tune the exact strength you want to apply in an edit by observing and comparing the effects of different strengths.
+                        Use <span class="dnerf">Differential Diffusion</span> to tune the exact strength you want to apply in an edit by observing
+                        and comparing the effects of different strengths.
                     </p>
                 </div>
                 <div class="content has-text-centered">
@@ -658,8 +836,6 @@
         <!--/ Animation. -->
 
 
-
-
     </div>
 </section>
 
@@ -683,10 +859,10 @@
     <div class="container">
         <div class="content has-text-centered">
             <a class="icon-link"
-               href="./static/videos/nerfies_paper.pdf">
+               href="https://arxiv.org/abs/2306.00950">
                 <i class="fas fa-file-pdf"></i>
             </a>
-            <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+            <a class="icon-link" href="https://github.com/exx8" class="external-link" disabled>
                 <i class="fab fa-github"></i>
             </a>
         </div>
@@ -694,7 +870,7 @@
             <div class="column is-8">
                 <div class="content">
                     <p>
-                        We thank the authors of <a href="https://nerfies.github.io/">Nerfies</a> that allowed to use
+                        We thank the authors of <a href="https://nerfies.github.io/">Nerfies</a> that allowed us to use
                         their website's template.
                     </p></div>
             </div>
@@ -716,6 +892,45 @@
         // Attach click event listener to each image
         clickableImages.forEach(img => {
             img.addEventListener('click', handleImageClick);
+        });
+    </script>
+    <script>
+        function handleViewportChange(mql) {
+            if (mql.matches) {
+                // Below 700px
+                adaptLabelsSmall(); // Call your function here
+            } else {
+                adaptLabelsBig();
+            }
+        }
+
+        function adaptLabelsSmall() {
+            document.getElementById("no-soft").innerHTML = "No Soft";
+            document.getElementById("standard-soft").innerHTML = "Standard"
+            document.querySelectorAll(".inpaint-mask-label").forEach((element)=>element.innerHTML="Mask");
+
+
+
+
+        }
+
+        function adaptLabelsBig() {
+            document.getElementById("no-soft").innerHTML = "No Softening";
+            document.getElementById("standard-soft").innerHTML = "Standard Softening"
+            document.querySelectorAll(".inpaint-mask-label").forEach((element)=>element.innerHTML="Inpaint Mask");
+
+
+        }
+
+
+        // Initial check
+        const initialMatch = window.matchMedia('(max-width: 700px)');
+        handleViewportChange(initialMatch);
+
+        // Listen for changes in viewport width
+        window.addEventListener('resize', function () {
+            const newMatch = window.matchMedia('(max-width: 700px)');
+            handleViewportChange(newMatch);
         });
     </script>
 </footer>
